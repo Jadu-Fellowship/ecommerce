@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 
 const Home = () => {
+  useEffect(() => {
+    axios.get("https://localhost:3001/products").then((res) => {
+      console.log(res);
+    });
+  }, []);
   return (
     <div>
       <h1>Products</h1>
