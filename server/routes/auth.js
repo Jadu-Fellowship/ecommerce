@@ -3,6 +3,9 @@ const express = require("express");
 const router = express.Router();
 
 router.post("/register", (req, res) => {
+  console.log(req.query);
+  console.log(req.headers.authorization);
+  console.log(req.body);
   res.json({
     msg: "User Registered!",
   });
